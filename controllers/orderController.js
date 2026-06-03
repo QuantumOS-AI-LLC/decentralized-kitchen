@@ -10,7 +10,7 @@ exports.getState = async (req, res, next) => {
     const mobileKitchens = await dbQueries.all('SELECT * FROM mobile_kitchens');
     
     // Sum completed and delivering sales today
-    const salesRow = await dbQueries.get("SELECT SUM(total) as totalSales FROM orders WHERE date(created_at) = date('now') OR status IN ('completed', 'delivering')");
+    const salesRow = await dbQueries.get("SELECT SUM(total) as totalSales FROM orders WHERE DATE(created_at) = CURRENT_DATE OR status IN ('completed', 'delivering')");
     const todaySales = salesRow.totalSales || 602.00;
 
     const activeCooksCount = cooks.filter(c => c.status === 'active').length;

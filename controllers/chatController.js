@@ -49,7 +49,7 @@ exports.processChat = async (req, res, next) => {
       const driversRow = await dbQueries.get("SELECT COUNT(*) as count FROM drivers WHERE status = 'idle'");
       const ordersRow = await dbQueries.get("SELECT COUNT(*) as count FROM orders WHERE status = 'pending'");
       
-      const salesRow = await dbQueries.get("SELECT SUM(total) as totalSales FROM orders WHERE date(created_at) = date('now') OR status IN ('completed', 'delivering')");
+      const salesRow = await dbQueries.get("SELECT SUM(total) as totalSales FROM orders WHERE DATE(created_at) = CURRENT_DATE OR status IN ('completed', 'delivering')");
       const totalToday = salesRow.totalSales || 602.00;
 
       reply = `### GKIA Live Database Assistant\n\nHere is a summary of the current backend metrics on your **MacBook Pro M5** environment:\n\n`;

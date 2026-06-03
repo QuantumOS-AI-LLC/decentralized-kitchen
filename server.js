@@ -24,14 +24,14 @@ app.use(morgan(':method :url :status :res[content-length] - :response-time ms', 
 }));
 
 // Serve static frontend files
-app.use(express.static(path.join(__dirname, './')));
+app.use(express.static(path.join(__dirname, './public')));
 
 // Bind API routes
 app.use('/api', apiRoutes);
 
 // Catch-all route to serve SPA
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, './index.html'));
+  res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
 // Bind Centralized Error Handler
