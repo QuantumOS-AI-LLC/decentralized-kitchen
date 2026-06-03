@@ -1,0 +1,19 @@
+{
+  "name": "ghost-kitchens-in-action-backend",
+  "version": "1.0.0",
+  "description": "Production-grade MVC backend for GKIA Decentralized Tamale Platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0",
+    "sqlite3": "^5.1.7",
+    "winston": "^3.13.0"
+  },
+  "author": "GKIA Architect",
+  "license": "MIT"
+}

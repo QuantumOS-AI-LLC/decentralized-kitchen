@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ghost Kitchens in Action (GKIA) - Decentralized Tamale System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER & NAVIGATION -->
+  <header>
+    <div class="nav-container">
+      <div class="logo" onclick="switchView('franchise')">
+        <div class="logo-icon">🫔</div>
+        <span>GKIA</span>
+      </div>
+      <nav>
+        <ul>
+          <li><div class="nav-tab active" data-view="franchise" data-translate="navFranchise">Join GKIA ($10k)</div></li>
+          <li><div class="nav-tab" data-view="menu" data-translate="navMenu">Tamales to Go</div></li>
+          <li><div class="nav-tab" data-view="dashboard" data-translate="navDashboard">CRM Dashboard</div></li>
+          <li><div class="nav-tab" data-view="claude" data-translate="navClaude">Claude AI Co-worker</div></li>
+          <li><div class="nav-tab" data-view="calculator" data-translate="navCalculator">ROI Calculator</div></li>
+          <li><div class="nav-tab" data-view="marketing" data-translate="navMarketing">Marketing Kit</div></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <div class="lang-switch">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="es">ES</button>
+        </div>
+        <button class="action-btn" onclick="switchView('calculator')" data-translate="btnLearnMore">Explore Models</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN APP PANELS -->
+  <main>
+    
+    <!-- SECTION 1: B2B FRANCHISE LANDING PAGE -->
+    <section id="view-franchise" class="view-section active">
+      <div class="hero-section">
+        <div>
+          <span class="badge badge-primary hero-tag" data-translate="heroTag">Decentralized Restaurant Franchise Model</span>
+          <h1 class="hero-title" data-translate="heroTitle">Start Your Tamale Business for Just $10,000 USD</h1>
+          <p class="hero-desc" data-translate="heroDesc">
+            A complete decentralized ghost kitchen setup. Get a brand package, consulting, CRM dashboard, local stay-at-home cook networks, and a MacBook Pro with M5 chip featuring Claude AI Co-worker integration.
+          </p>
+          <div class="hero-actions">
+            <button class="action-btn" onclick="switchView('calculator')" data-translate="btnGetStarted">Get Started Now</button>
+            <button class="secondary-btn" onclick="switchView('dashboard')" data-translate="navDashboard">View Live CRM</button>
+          </div>
+        </div>
+        <div class="hero-image-container">
+          <div class="hero-image-card">
+            <div class="hero-graphic">
+              <!-- SVG Tamale and Tech representation -->
+              <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="25" y="30" width="50" height="40" rx="6" fill="url(#tamale-grad)" stroke="#ffaa00" stroke-width="2"/>
+                <path d="M25 45 C40 35, 60 35, 75 45" stroke="#ff5a36" stroke-width="2"/>
+                <path d="M25 55 C40 45, 60 45, 75 55" stroke="#ff5a36" stroke-width="2"/>
+                <circle cx="50" cy="50" r="12" fill="#090a0f" stroke="#10b981" stroke-width="2"/>
+                <text x="45" y="54" fill="#10b981" font-family="monospace" font-size="10" font-weight="bold">M5</text>
+                <defs>
+                  <linearGradient id="tamale-grad" x1="25" y1="30" x2="75" y2="70" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#ff9a00"/>
+                    <stop offset="1" stop-color="#d46000"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <h4 style="margin-top: 1rem; letter-spacing: 0.05em; font-size: 0.9rem; text-transform: uppercase;">GKIA Tech Stack Included</h4>
+            </div>
+          </div>
+          <div class="hero-badge-float">
+            <span style="color: var(--color-secondary); font-weight: 700; font-size: 1.25rem;">$10k</span>
+            <span style="font-size: 0.8rem; display: block; color: var(--text-secondary);">Entry Price</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- VALUE PROPOSITIONS -->
+      <div class="value-props">
+        <h2 class="section-title" style="text-align: center;" data-translate="valuePropsTitle">Why Decentralized Tamales?</h2>
+        <p class="section-subtitle" style="text-align: center; max-width: 700px; margin: 0.5rem auto 3rem auto;" data-translate="valuePropsSubtitle">
+          Traditional restaurants cost $250k+ to start. Ghost Kitchens in Action puts you in business for a fraction of that.
+        </p>
+        
+        <div class="grid-3">
+          <div class="glass-card value-prop-card">
+            <div class="prop-icon">💰</div>
+            <h3 data-translate="prop1Title">Low Entry Cost ($10k)</h3>
+            <p class="text-secondary" data-translate="prop1Desc">Covers brand licensing, local vendor partnerships, software setup, and hardware requirements (MacBook Pro M5).</p>
+          </div>
+          <div class="glass-card value-prop-card">
+            <div class="prop-icon">🤖</div>
+            <h3 data-translate="prop2Title">AI Integration with Claude</h3>
+            <p class="text-secondary" data-translate="prop2Desc">Claude Co-worker acts as your marketing manager, logistics dispatcher, and quality control inspector.</p>
+          </div>
+          <div class="glass-card value-prop-card">
+            <div class="prop-icon">🤝</div>
+            <h3 data-translate="prop3Title">Dual Supply Models</h3>
+            <p class="text-secondary" data-translate="prop3Desc">Partner with local bulk tamale factories or empower Hispanic stay-at-home cooks to automate production.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PACKAGE CONTENTS -->
+      <div class="glass-card package-banner">
+        <div class="package-grid">
+          <div>
+            <span class="badge badge-accent">INCLUDED IN PLATFORM</span>
+            <h2 style="font-size: 2rem; margin: 0.75rem 0;" data-translate="pkgTitle">What's Included in the $10,000 Package?</h2>
+            <p class="text-secondary" style="margin-bottom: 1.5rem;">We equip you with all the physical hardware, software integrations, recipes, and strategic guidelines required to launch and scale.</p>
+            <button class="action-btn" onclick="switchView('calculator')">Calculate My Profit Model</button>
+          </div>
+          <div>
+            <div class="package-item">
+              <span class="package-item-icon">✓</span>
+              <div>
+                <strong data-translate="pkg1">Consulting & Brand Setup: Local entity registration and brand customization.</strong>
+              </div>
+            </div>
+            <div class="package-item">
+              <span class="package-item-icon">✓</span>
+              <div>
+                <strong data-translate="pkg2">MacBook Pro with M5 Chip: High-performance AI hardware preconfigured.</strong>
+              </div>
+            </div>
+            <div class="package-item">
+              <span class="package-item-icon">✓</span>
+              <div>
+                <strong data-translate="pkg3">Claude AI Co-worker Integration: Customized prompts, local hot-spot routing, and marketing strategy builders.</strong>
+              </div>
+            </div>
+            <div class="package-item">
+              <span class="package-item-icon">✓</span>
+              <div>
+                <strong data-translate="pkg4">GKIA CRM Dashboard License: Manage cooks, mobile kitchens (roach coaches), and local delivery dispatch.</strong>
+              </div>
+            </div>
+            <div class="package-item">
+              <span class="package-item-icon">✓</span>
+              <div>
+                <strong data-translate="pkg5">Coaching & Training: Brand building, local regulations compliance, and driver coordination setup.</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODEL COMPARISON GRID -->
+      <div class="model-comparison">
+        <h2 class="section-title" style="text-align: center;" data-translate="compTitle">Choose Your Supply Chain Architecture</h2>
+        <p class="section-subtitle" style="text-align: center; max-width: 700px; margin: 0.5rem auto 3rem auto;" data-translate="compSubtitle">Select or combine these models to fit your local logistics capacity and capital.</p>
+        
+        <div class="comparison-grid">
+          <!-- CARD A -->
+          <div class="glass-card comp-card">
+            <span class="badge badge-accent">OPTION A: AT-HOME COOK MODEL</span>
+            <p class="text-secondary">Empowers stay-at-home Hispanic moms. We automate supply and local drop-offs to create a highly decentralized prep network.</p>
+            <div class="comp-metrics">
+              <div class="comp-metric-row">
+                <span class="comp-metric-label">Production Cost</span>
+                <span class="comp-metric-value">&lt; $1.50 / unit</span>
+              </div>
+              <div class="comp-metric-row">
+                <span class="comp-metric-label">Wholesale Price (to Roach Coach)</span>
+                <span class="comp-metric-value">$3.00 / unit</span>
+              </div>
+              <div class="comp-metric-row">
+                <span class="comp-metric-label">Retail/UberEats Price</span>
+                <span class="comp-metric-value">$7.00 / unit</span>
+              </div>
+              <div class="comp-metric-row">
+                <span class="comp-metric-label">Franchisee Net Profit Margin</span>
+                <span class="comp-metric-value" style="color: var(--color-accent); font-weight: 800;">High ($1.50 - $4.00)</span>
+              </div>
+            </div>
+            <ul class="comp-list">
+              <li>Low overhead (home prep compliant with AZ Cottage Laws).</li>
+              <li>High community and social impact.</li>
+              <li>Requires local delivery driver coordination.</li>
+            </ul>
+          </div>
+          <!-- CARD B -->
+          <div class="glass-card comp-card alt-border">
+            <span class="badge badge-gold">OPTION B: WHOLESALE BULK MODEL</span>
+            <p class="text-secondary">Partner with a local wholesale tamale factory store. Buy prepared masa/tamales in bulk and distribute directly.</p>
+            <div class="comp-metrics">
+              <div class="comp-metric-row">
+                <span class="comp-metric-label">Production/Wholesale Buy Cost</span>
+                <span class="comp-metric-value">$3.00 / unit</span>
+              </div>
+              <div class="comp-metric-row">
+                <span class="comp-metric-label">Wholesale Price (to Roach Coach)</span>
+                <span class="comp-metric-value">$4.50 / unit</span>
+              </div>
+              <div class="comp-metric-row">
+                <span class="comp-metric-label">Retail/UberEats Price</span>
+                <span class="comp-metric-value">$8.00 - $9.00 / unit</span>
+              </div>
+              <div class="comp-metric-row">
+                <span class="comp-metric-label">Franchisee Net Profit Margin</span>
+                <span class="comp-metric-value" style="color: var(--color-secondary); font-weight: 800;">Medium ($1.50 - $5.50)</span>
+              </div>
+            </div>
+            <ul class="comp-list">
+              <li>Zero cooking prep or health regulation audits on your end.</li>
+              <li>Factory handles commercial scaling capacity.</li>
+              <li>Lower margin relative to retail price.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- PLAYBOOK / HOW IT WORKS -->
+      <div class="playbook-section">
+        <h2 class="section-title" style="text-align: center;">The 5-Step Launch Playbook</h2>
+        <p class="section-subtitle" style="text-align: center; max-width: 700px; margin: 0.5rem auto 3rem auto;">How you go from $10,000 USD to a live, automated tamale distribution system in Phoenix.</p>
+        
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-badge">1</div>
+            <div class="timeline-panel">
+              <h3>Secure License & CRM Dashboard</h3>
+              <p class="text-secondary">Your $10k covers local entity setup, GKIA branding assets, and a lifetime commercial license to our custom CRM dashboard.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-badge">2</div>
+            <div class="timeline-panel">
+              <h3>Receive MacBook Pro M5 Environment</h3>
+              <p class="text-secondary">Get your preconfigured MacBook Pro featuring Claude AI Co-worker desktop automation, local hot-spot database maps, and bilingual marketing copy engines.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-badge">3</div>
+            <div class="timeline-panel">
+              <h3>Recruit Prep Network (Option A/B)</h3>
+              <p class="text-secondary">Run GKIA's pre-built Spanish FB Ads to onboard 3-5 stay-at-home cooks (Option A) or sign wholesale purchase contracts with local tamale stores (Option B).</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-badge">4</div>
+            <div class="timeline-panel">
+              <h3>Onboard Roach Coaches & Delivery Apps</h3>
+              <p class="text-secondary">Onboard 3-5 existing Mexican food trucks/carts in Phoenix casino zones to sell your wholesale tamales, and integrate delivery apps (Uber Eats, Grubhub).</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-badge">5</div>
+            <div class="timeline-panel">
+              <h3>Launch & Automate</h3>
+              <p class="text-secondary">Consumers order through apps; CRM routes orders to cooks, dispatches local drivers for drop-offs, and Claude dynamically checks quality checklists.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHOENIX HOTSPOTS GUIDE -->
+      <div class="hotspot-guide">
+        <h2 class="section-title" style="text-align: center;">Phoenix Metro Late-Night Sales Corridors</h2>
+        <p class="section-subtitle" style="text-align: center; max-width: 700px; margin: 0.5rem auto 3rem auto;">Maximize high-margin retail sales between 10 PM and 3 AM near casinos and entertainment hubs.</p>
+        
+        <div class="hotspot-grid">
+          <div class="hotspot-card">
+            <div class="hotspot-header">
+              <h3>Casino Arizona</h3>
+              <span class="hotspot-hours">10 PM - 3 AM</span>
+            </div>
+            <p class="text-secondary">Loop 101 & McKellips Rd. High concentration of overnight hospitality employees and late gamblers. Prime location for food truck parking partnerships.</p>
+          </div>
+          <div class="hotspot-card">
+            <div class="hotspot-header">
+              <h3>Desert Diamond Casino</h3>
+              <span class="hotspot-hours">11 PM - 3 AM</span>
+            </div>
+            <p class="text-secondary">West Valley (Glendale). High late-night gamer foot traffic. Focus delivery geofencing around loading docks and employee shift changes.</p>
+          </div>
+          <div class="hotspot-card">
+            <div class="hotspot-header">
+              <h3>Maryvale / West Phoenix</h3>
+              <span class="hotspot-hours">10 AM - 10 PM</span>
+            </div>
+            <p class="text-secondary">Target residential density. Focus on stay-at-home cooks for supply logistics and direct neighborhood local drop-offs via gig drivers.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ ACCORDION -->
+      <div class="faq-section">
+        <h2 class="section-title" style="text-align: center;">Frequently Asked Questions</h2>
+        <p class="section-subtitle" style="text-align: center; max-width: 700px; margin: 0.5rem auto 3rem auto;">Everything a potential operator needs to know about regulations, tech, and margins.</p>
+        
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Do I need a commercial kitchen license?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>No commercial kitchen is required for Option A! Local stay-at-home cooks are registered under the Arizona Cottage Food Program (Title 36), which allows preparation of non-hazardous food products in home kitchens. GKIA helps audit and register your cooks to ensure compliance.</p>
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How do we handle delivery and driver logistics?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>The GKIA CRM dashboard integrates with delivery APIs. Orders from Uber Eats, Grubhub, and our Web App are compiled in the CRM, which auto-assigns local gig drivers to pick up from the cook's home and drop off at the consumer or roach coach.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What makes the MacBook M5 Claude Co-worker so special?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>It is preconfigured with advanced system prompts, geofenced Phoenix casino traffic logs, Spanish-language marketing campaign templates, and database hook scripts. Claude analyzes live CRM metrics to suggest route optimizations, quality checks, and ad spends.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What is the real profit margin in this business model?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Option A (Home Cooks) averages a profit of $1.50 to $4.00 per tamale depending on wholesale vs retail sale mix. Option B (Factory Bulk) offers margins of $1.50 to $5.50 at higher retail prices. Break-even on the $10,000 package is typically reached within 30 to 60 days.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How do we recruit stay-at-home cooks and roach coaches?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>We provide proven marketing copy templates (bilingual Facebook and Instagram ads) in the Marketing Kit. These ads target local culinary groups in Maryvale, Glendale, and South Phoenix, driving a steady stream of supplier applications.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: B2C CONSUMER ORDERING DEMO -->
+    <section id="view-menu" class="view-section">
+      <div class="b2c-hero">
+        <span class="badge badge-accent">TAMALES TO GO</span>
+        <h1 style="font-size: 3rem; margin: 0.5rem 0 1rem 0;" data-translate="b2cTitle">Tamales to Go - Phoenix, AZ</h1>
+        <p class="text-secondary" data-translate="b2cSubtitle">Fresh, artisanal tamales prepared locally and delivered hot to your doorstep or mobile kitchen vendor.</p>
+      </div>
+
+      <div class="b2c-menu-section">
+        <div class="menu-grid">
+          
+          <!-- ITEM 1 -->
+          <div class="menu-card">
+            <div class="menu-img">
+              <!-- Tamal SVG -->
+              <svg viewBox="0 0 100 100" fill="none" width="80" height="80">
+                <ellipse cx="50" cy="50" rx="35" ry="18" fill="#ffd480" stroke="#cc8800" stroke-width="2"/>
+                <path d="M20 50 Q50 35 80 50" stroke="#cc8800" stroke-dasharray="3 3"/>
+                <path d="M15 50 Q50 65 85 50" stroke="#cc8800"/>
+              </svg>
+              <span style="position: absolute; top: 15px; right: 15px;" class="badge badge-primary">Best Seller</span>
+            </div>
+            <div class="menu-details">
+              <div class="menu-title-row">
+                <h3>Puerco Rojo (Red Pork)</h3>
+                <span class="menu-price">$7.00</span>
+              </div>
+              <p class="menu-desc">Slow-roasted pork shoulder shredded in a rich, red guajillo chili sauce, wrapped in soft, stone-ground masa.</p>
+              <div class="delivery-integrations">
+                <button class="partner-link-btn btn-uber" data-translate="btnOrderUber">Order on Uber Eats</button>
+                <button class="partner-link-btn btn-grub" data-translate="btnOrderGrub">Order on Grubhub</button>
+                <button class="partner-link-btn btn-local" data-translate="btnOrderLocal">GKIA Local Delivery</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ITEM 2 -->
+          <div class="menu-card">
+            <div class="menu-img">
+              <svg viewBox="0 0 100 100" fill="none" width="80" height="80">
+                <ellipse cx="50" cy="50" rx="35" ry="18" fill="#ffe0b3" stroke="#cc8800" stroke-width="2"/>
+                <path d="M15 50 Q50 32 85 50" stroke="#059669" stroke-width="2"/>
+                <path d="M20 50 Q50 62 80 50" stroke="#cc8800"/>
+              </svg>
+            </div>
+            <div class="menu-details">
+              <div class="menu-title-row">
+                <h3>Pollo Verde (Green Chicken)</h3>
+                <span class="menu-price">$7.00</span>
+              </div>
+              <p class="menu-desc">Tender chicken breast shredded and mixed with an aromatic green tomatillo and cilantro sauce.</p>
+              <div class="delivery-integrations">
+                <button class="partner-link-btn btn-uber" data-translate="btnOrderUber">Order on Uber Eats</button>
+                <button class="partner-link-btn btn-grub" data-translate="btnOrderGrub">Order on Grubhub</button>
+                <button class="partner-link-btn btn-local" data-translate="btnOrderLocal">GKIA Local Delivery</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ITEM 3 -->
+          <div class="menu-card">
+            <div class="menu-img">
+              <svg viewBox="0 0 100 100" fill="none" width="80" height="80">
+                <ellipse cx="50" cy="50" rx="35" ry="18" fill="#fff5cc" stroke="#cc8800" stroke-width="2"/>
+                <path d="M15 50 Q50 65 85 50" stroke="#e0a96d" stroke-dasharray="4 2"/>
+              </svg>
+              <span style="position: absolute; top: 15px; right: 15px;" class="badge badge-accent">Vegetarian</span>
+            </div>
+            <div class="menu-details">
+              <div class="menu-title-row">
+                <h3>Rajas con Queso</h3>
+                <span class="menu-price">$7.00</span>
+              </div>
+              <p class="menu-desc">Strips of roasted poblano peppers paired with melted Oaxaca and Monterey Jack cheese inside fluffy corn masa.</p>
+              <div class="delivery-integrations">
+                <button class="partner-link-btn btn-uber" data-translate="btnOrderUber">Order on Uber Eats</button>
+                <button class="partner-link-btn btn-grub" data-translate="btnOrderGrub">Order on Grubhub</button>
+                <button class="partner-link-btn btn-local" data-translate="btnOrderLocal">GKIA Local Delivery</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ITEM 4 -->
+          <div class="menu-card">
+            <div class="menu-img">
+              <svg viewBox="0 0 100 100" fill="none" width="80" height="80">
+                <ellipse cx="50" cy="50" rx="35" ry="18" fill="#ffe680" stroke="#cc8800" stroke-width="2"/>
+                <circle cx="50" cy="50" r="5" fill="#f59e0b"/>
+                <circle cx="40" cy="48" r="4" fill="#f59e0b"/>
+                <circle cx="60" cy="52" r="4" fill="#f59e0b"/>
+              </svg>
+              <span style="position: absolute; top: 15px; right: 15px;" class="badge badge-gold">Sweet</span>
+            </div>
+            <div class="menu-details">
+              <div class="menu-title-row">
+                <h3>Elote Dulce (Sweet Corn)</h3>
+                <span class="menu-price">$7.00</span>
+              </div>
+              <p class="menu-desc">Sweet corn kernel blended directly into a buttery, sweet corn masa. Perfect as a breakfast or dessert treat.</p>
+              <div class="delivery-integrations">
+                <button class="partner-link-btn btn-uber" data-translate="btnOrderUber">Order on Uber Eats</button>
+                <button class="partner-link-btn btn-insta" data-translate="btnOrderInsta">Shop on Instacart</button>
+                <button class="partner-link-btn btn-local" data-translate="btnOrderLocal">GKIA Local Delivery</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: OWNER CRM & LIVE DASHBOARD -->
+    <section id="view-dashboard" class="view-section">
+      <div style="margin-bottom: 2rem;">
+        <span class="badge badge-primary">Owner Portal</span>
+        <h1 style="font-size: 2.5rem; margin-top: 0.25rem;" data-translate="crmTitle">GKIA Partner & CRM Portal</h1>
+        <p class="text-secondary" data-translate="crmSubtitle">Monitor stays-at-home cooks, manage roach coaches, and dispatch delivery drivers in Phoenix.</p>
+      </div>
+
+      <!-- METRICS ROW -->
+      <div class="metrics-row">
+        <div class="glass-card metric-card">
+          <span class="text-muted" data-translate="metricActiveCooks">Active Cooks</span>
+          <div class="metric-val" id="m-cooks">2</div>
+          <span class="metric-change up">★ Phoenix Network</span>
+        </div>
+        <div class="glass-card metric-card">
+          <span class="text-muted" data-translate="metricRoachCoaches">Partner Roach Coaches</span>
+          <div class="metric-val" id="m-trucks">3</div>
+          <span class="metric-change up">● Online</span>
+        </div>
+        <div class="glass-card metric-card">
+          <span class="text-muted" data-translate="metricDailySales">Today's Sales</span>
+          <div class="metric-val" id="m-sales">$602.00</div>
+          <span class="metric-change up">+18.4% vs yesterday</span>
+        </div>
+        <div class="glass-card metric-card">
+          <span class="text-muted" data-translate="metricPendingOrders">Pending Dispatch</span>
+          <div class="metric-val" id="m-pending">1</div>
+          <span class="metric-change down" style="color: var(--color-secondary);">Needs action</span>
+        </div>
+      </div>
+
+      <!-- CRM WORKSPACE -->
+      <div class="dashboard-grid">
+        
+        <!-- Orders list -->
+        <div class="glass-card">
+          <div class="crm-section-title">
+            <h2>Live Orders Feed</h2>
+            <span class="badge badge-accent">Live Simulation Running</span>
+          </div>
+          
+          <div class="crm-table-container">
+            <table class="crm-table">
+              <thead>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Customer</th>
+                  <th>Destination</th>
+                  <th>Items</th>
+                  <th>Value</th>
+                  <th>Channel</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="crm-orders-body">
+                <!-- Javascript will render here -->
+              </tbody>
+            </table>
+          </div>
+          
+          <div class="crm-actions-bar">
+            <button class="action-btn" id="btn-crm-dispatch">🚀 Dispatch Idle Driver</button>
+            <button class="secondary-btn" id="btn-crm-cook">🍲 Assign Batch to Home Cook</button>
+            <button class="secondary-btn" id="btn-crm-restock">🚚 Restock Roach Coach</button>
+          </div>
+        </div>
+
+        <!-- Right Side Trackers -->
+        <div class="track-panel">
+          <!-- Cooks -->
+          <div class="glass-card" style="padding: 1.5rem;">
+            <h3 style="font-size: 1.1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">Stay-at-Home Cooks (Option A)</h3>
+            <div class="cook-list" id="active-cooks-list">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+          
+          <!-- Drivers -->
+          <div class="glass-card" style="padding: 1.5rem;">
+            <h3 style="font-size: 1.1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">On-Demand Drivers</h3>
+            <div class="driver-list" id="active-drivers-list">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: CLAUDE AI CO-WORKER CONSOLE -->
+    <section id="view-claude" class="view-section">
+      <div style="margin-bottom: 2rem;">
+        <span class="badge badge-accent">Co-work Environment</span>
+        <h1 style="font-size: 2.5rem; margin-top: 0.25rem;" data-translate="aiTitle">Claude AI Co-worker Console</h1>
+        <p class="text-secondary" data-translate="aiSubtitle">Your virtual marketing agent, quality control auditor, and Phoenix location specialist.</p>
+      </div>
+
+      <div class="ai-console-grid">
+        
+        <!-- AI Controls Sidebar -->
+        <div class="glass-card ai-sidebar">
+          <h3 style="font-size: 1.1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">Co-worker Quick Prompts</h3>
+          
+          <div class="ai-prompt-presets">
+            
+            <button class="preset-btn" data-type="casinos">
+              <span class="preset-btn-title" data-translate="aiPresetTitle1">Phoenix Casino Hotspots</span>
+              <span class="text-secondary" data-translate="aiPresetDesc1">Late night sales strategy (10pm - 3am)</span>
+            </button>
+            
+            <button class="preset-btn" data-type="ads">
+              <span class="preset-btn-title" data-translate="aiPresetTitle2">Spanish FB Ad Copies</span>
+              <span class="text-secondary" data-translate="aiPresetDesc2">Recruit cooks & food trucks</span>
+            </button>
+            
+            <button class="preset-btn" data-type="quality">
+              <span class="preset-btn-title" data-translate="aiPresetTitle3">Quality Control Checklist</span>
+              <span class="text-secondary" data-translate="aiPresetDesc3">Standard for stay-at-home cooks</span>
+            </button>
+            
+            <button class="preset-btn" data-type="pricing">
+              <span class="preset-btn-title" data-translate="aiPresetTitle4">Optimize UberEats Pricing</span>
+              <span class="text-secondary" data-translate="aiPresetDesc4">Option A vs Option B comparison</span>
+            </button>
+            
+          </div>
+        </div>
+
+        <!-- Chat Console window -->
+        <div class="ai-chat-window">
+          <div class="chat-header">
+            <div class="chat-bot-identity">
+              <div class="bot-avatar">C</div>
+              <div class="bot-meta">
+                <span class="bot-name">Claude Co-worker</span>
+                <span class="bot-status" data-translate="botStatus">● Online • Connected to MacBook M5</span>
+              </div>
+            </div>
+            <span class="badge badge-primary">Model: 3.5 Sonnet</span>
+          </div>
+
+          <div class="chat-messages" id="ai-chat-messages">
+            <!-- Messages render here -->
+            <div class="chat-bubble bubble-bot">
+              <strong>Claude:</strong> Hello! I am Claude, your GKIA AI Co-worker. Powered by your MacBook Pro M5 environment, I'm ready to help you manage your tamale micro-franchise. Let's design some marketing campaigns, manage the suppliers, or set up distribution routes. What shall we tackle today?
+            </div>
+          </div>
+
+          <div class="chat-typing-indicator" id="ai-typing-indicator">
+            <div class="dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <div class="chat-input-area">
+            <input type="text" class="chat-input" id="ai-chat-input" placeholder="Ask Claude about marketing, logistics, local supply..." data-translate="aiInputPlaceholder">
+            <button class="send-btn" id="ai-send-btn">➔</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: ROI CALCULATOR -->
+    <section id="view-calculator" class="view-section">
+      <div style="margin-bottom: 2rem;">
+        <span class="badge badge-gold">Financial Modeling</span>
+        <h1 style="font-size: 2.5rem; margin-top: 0.25rem;" data-translate="calcTitle">Interactive Profit & ROI Calculator</h1>
+        <p class="text-secondary" data-translate="calcSubtitle">Compare and model your decentralized tamale business metrics.</p>
+      </div>
+
+      <div class="calc-grid">
+        
+        <!-- Calculator Inputs -->
+        <div class="glass-card calc-sidebar">
+          
+          <div class="calc-option-tabs">
+            <button class="calc-opt-btn active" data-model="homeCook">Option A: Stay-at-Home Cooks</button>
+            <button class="calc-opt-btn" data-model="wholesale">Option B: Wholesale Bulk Store</button>
+          </div>
+
+          <!-- Volume Slider -->
+          <div class="slider-group">
+            <div class="slider-header">
+              <span class="slider-label" data-translate="lblVolume">Daily Tamale Volume Sold</span>
+              <span class="slider-val" id="calc-volume-val">150</span>
+            </div>
+            <input type="range" class="calc-slider" id="calc-volume" min="20" max="600" value="150">
+          </div>
+
+          <!-- Roach Coaches Slider -->
+          <div class="slider-group">
+            <div class="slider-header">
+              <span class="slider-label">Number of Partner Roach Coaches / Trucks</span>
+              <span class="slider-val" id="calc-coaches-val">3</span>
+            </div>
+            <input type="range" class="calc-slider" id="calc-coaches" min="1" max="10" value="3">
+          </div>
+
+          <!-- Cook Cost (Option A Only) -->
+          <div class="slider-group" id="group-cook-cost">
+            <div class="slider-header">
+              <span class="slider-label" data-translate="lblCookCost">At-Home Cook Production Cost</span>
+              <span class="slider-val" id="calc-cook-cost-val">$1.20</span>
+            </div>
+            <input type="range" class="calc-slider" id="calc-cook-cost" min="0.80" max="2.00" step="0.05" value="1.20">
+          </div>
+
+          <!-- Wholesale Selling Price (Option A Only) -->
+          <div class="slider-group" id="group-wholesale-sell">
+            <div class="slider-header">
+              <span class="slider-label" data-translate="lblWholesaleSell">Wholesale Price (to Roach Coaches)</span>
+              <span class="slider-val" id="calc-wholesale-sell-val">$3.00</span>
+            </div>
+            <input type="range" class="calc-slider" id="calc-wholesale-sell" min="2.00" max="4.00" step="0.10" value="3.00">
+          </div>
+
+          <!-- Factory Bulk Price (Option B Only) -->
+          <div class="slider-group" id="group-bulk-buy" style="display: none;">
+            <div class="slider-header">
+              <span class="slider-label" data-translate="lblBulkBuy">Factory Bulk Purchase Price</span>
+              <span class="slider-val" id="calc-bulk-buy-val">$3.00</span>
+            </div>
+            <input type="range" class="calc-slider" id="calc-bulk-buy" min="2.00" max="4.50" step="0.10" value="3.00">
+          </div>
+
+          <!-- Retail Price -->
+          <div class="slider-group">
+            <div class="slider-header">
+              <span class="slider-label" data-translate="lblRetailPrice">Retail Selling Price (Uber Eats / Mobile)</span>
+              <span class="slider-val" id="calc-retail-val">$7.00</span>
+            </div>
+            <input type="range" class="calc-slider" id="calc-retail" min="5.00" max="10.00" step="0.25" value="7.00">
+          </div>
+
+        </div>
+
+        <!-- Calculator Results -->
+        <div class="glass-card calc-results-panel">
+          <div class="calc-results-title">
+            <h2 data-translate="resultsTitle">Financial Projections Summary</h2>
+            <span class="badge badge-accent">Investment: $10,000</span>
+          </div>
+
+          <div class="calc-results-grid">
+            <div class="result-card">
+              <div class="result-lbl" data-translate="resMargin">Profit Margin per Tamale</div>
+              <div class="result-val" id="res-margin">$4.35</div>
+            </div>
+            <div class="result-card">
+              <div class="result-lbl" data-translate="resDailyProfit">Estimated Daily Profit</div>
+              <div class="result-val" id="res-daily">$250.00</div>
+            </div>
+            <div class="result-card">
+              <div class="result-lbl" data-translate="resWeeklyProfit">Estimated Weekly Profit</div>
+              <div class="result-val" id="res-weekly">$1,750.00</div>
+            </div>
+            <div class="result-card">
+              <div class="result-lbl" data-translate="resAnnualProfit">Estimated Annual Profit</div>
+              <div class="result-val highlight" id="res-annual">$91,250</div>
+            </div>
+          </div>
+
+          <div class="result-card" style="background: rgba(255, 90, 54, 0.03); border-color: rgba(255, 90, 54, 0.15);">
+            <div class="result-lbl" data-translate="resBreakEven">Break-Even on $10k Investment</div>
+            <div class="result-val highlight" style="font-size: 2.2rem; color: var(--color-secondary);" id="res-breakeven">40 days</div>
+          </div>
+
+          <div class="roi-meter-container">
+            <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600;">
+              <span id="roi-percentage-label">75% ROI in Month 1</span>
+              <span>100% Break-even target</span>
+            </div>
+            <div class="roi-bar-bg">
+              <div class="roi-bar-fill" id="roi-progress-fill"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 6: MARKETING KIT & LAUNCH ASSETS -->
+    <section id="view-marketing" class="view-section">
+      <div style="margin-bottom: 2rem;">
+        <span class="badge badge-primary">Launch Campaign</span>
+        <h1 style="font-size: 2.5rem; margin-top: 0.25rem;">GKIA Marketing Kit & SMS Hub</h1>
+        <p class="text-secondary">Ready-to-use launch templates. Recruit stay-at-home cooks, onboard food trucks, and dispatch SMS alerts.</p>
+      </div>
+
+      <div class="kit-layout">
+        
+        <!-- Left Side selector -->
+        <div class="glass-card kit-selector">
+          <h3 style="font-size: 1.1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 0.5rem;">Select Template</h3>
+          
+          <button class="kit-sel-btn active" data-template="fb_es_cooks">
+            <span>📢</span> Spanish FB Ad: Recruit Cooks
+          </button>
+          
+          <button class="kit-sel-btn" data-template="fb_en_trucks">
+            <span>📢</span> English FB Ad: Roach Coaches
+          </button>
+          
+          <button class="kit-sel-btn" data-template="sms_order_placed">
+            <span>💬</span> SMS: Customer Order Confirmation
+          </button>
+          
+          <button class="kit-sel-btn" data-template="sms_driver_onway">
+            <span>💬</span> SMS: Driver Dispatched Alert
+          </button>
+          
+          <button class="kit-sel-btn" data-template="sms_cook_alert">
+            <span>💬</span> SMS: Cook Batch Request (Spanish)
+          </button>
+        </div>
+
+        <!-- Right Side display -->
+        <div class="kit-content-area">
+          <div class="template-card">
+            <div class="template-header">
+              <h3 style="font-size: 1.1rem;">Template Copy</h3>
+              <span class="badge badge-accent">Ready to Use</span>
+            </div>
+            <div class="template-body">
+              <div class="template-text-box" id="template-text-box">
+                <!-- Javascript will load template text here -->
+              </div>
+              <div class="template-actions">
+                <button class="action-btn" id="btn-copy-template">
+                  <span>📋 Copy Template</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast-notification" class="toast">Action completed!</div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="max-width: 1400px; margin: 0 auto; padding: 0 2rem;">
+      <p>&copy; 2026 Ghost Kitchens in Action (GKIA) • Decentralized Tamales System. Powered by Claude AI Co-worker & MacBook Pro M5 Environment.</p>
+      <p style="font-size: 0.75rem; margin-top: 0.5rem; color: var(--text-muted);">Consulting Packages starting at $10k. Standardized for Phoenix Metro Area.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
