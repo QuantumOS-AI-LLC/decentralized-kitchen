@@ -37,10 +37,12 @@ app.get('*', (req, res) => {
 // Bind Centralized Error Handler
 app.use(errorHandler);
 
-// Listen on Port
-app.listen(PORT, () => {
-  logger.info(`GKIA Production-grade MVC Server listening on http://localhost:${PORT}`);
-});
+// Listen on Port (only if run directly)
+if (require.main === module) {
+  app.listen(PORT, () => {
+    logger.info(`GKIA Production-grade MVC Server listening on http://localhost:${PORT}`);
+  });
+}
 
 // Graceful Shutdown
 process.on('SIGINT', () => {
@@ -54,3 +56,5 @@ process.on('SIGINT', () => {
     process.exit(0);
   });
 });
+
+module.exports = app;
